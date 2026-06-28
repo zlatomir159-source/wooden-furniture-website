@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 47% 90%;
+    --foreground: 0 0% 0%;
+    --card: 33 47% 90%;
+    --card-foreground: 0 0% 0%;
+    --popover: 33 47% 90%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 33 30% 85%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 33 30% 85%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 14 52% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 33 20% 75%;
+    --input: 33 20% 75%;
+    --ring: 14 52% 49%;
+    --radius: 0.5rem;
+    --sidebar-background: 33 47% 90%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 33 30% 85%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 33 20% 75%;
+    --sidebar-ring: 14 52% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-base text-primary font-sans antialiased;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  .perspective-1200 {
+    perspective: 1200px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .group:hover .group-hover\:rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
